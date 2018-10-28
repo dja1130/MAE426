@@ -75,17 +75,6 @@ a19=sqrt(R*gamma1*Tt19);
 %M19=1 so v19=a19
 v19=a19
 
-f=(cph*Tt4-cpc*Tt3)/(QR*ettaB-cph*Tt4) %answer B
-Tt5=Tt4-(cpc*(Tt3-Tt2)+alpha*cpc*(Tt13-Tt2))/((1+f)*cph*ettaM);
-tauT=Tt5/Tt4;
-piT=tauT^(gamma2/((gamma2-1)*et));
-Pt5= Pt4*piT;
-Pt9=Pt5*piN;
-P9=Pt9/((gamma2+1)/2)^(gamma2/(gamma2-1));
-Tt9=Tt5
-T9=Tt5/((gamma2+1)/2);
-a9= sqrt(gamma2*R*T9);
-v9=a9;
 
 PowerRatio=(Tt3-Tt2)/(Tt13-Tt2) % Answer A
 VelocityRatio= v19/v9 %Answer C
@@ -103,8 +92,6 @@ TL=min(T)
 Carnot= 1-(TL/TH)
 ettaTH= (alpha*(v19eff^2)+(1+f)*(v9eff^2)-(1+alpha)*(vo^2))/(2*f*QR) 
 % carnot roughly double Answer E
-
-
 
 % S(2) = load('')
 % sound(S(2).y,S(2).Fs)
