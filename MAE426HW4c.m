@@ -1,12 +1,14 @@
 
 clear all
-Mo=2.0;
+Mo=0.75;
 R=287;
 %from
-h=37e3;
+h=10e3; %Km
+Tsl= 288.15
+Psl=101.3
 %we get
-to=216.667; %k
-po=21.73; %kPa
+To=288.15-0.0065*(11000)
+Po=Psl*(To/Tsl)^(g/(R*0.0065)); %kPa
 Qr=42800000; %j/kg
 cpc=1004;
 cph=1156 ;
@@ -16,22 +18,22 @@ gamma2=1.33;
 gamma3=1.3;
 tauL=7;
 
-To=288.15-0.0065*(11000)
+
 ao=sqrt(gamma*R*to);
 vo=Mo*ao;
-piD=1;
+piD=.98;
 ec=1;
 piB= 1;
 ettaB=1;
 et=1;
 ettaM=1;
 piN=1;
-p9=po;
+alpha=10
 
-pto= po*((1+((gamma-1)*((Mo^2)/2)))^(gamma/(gamma-1)));
-pt2=pto*piD;
-tto=to*(1+(gamma-1)*(Mo^2)/2);
-tt2=tto;
+Pto= po*((1+((gamma-1)*((Mo^2)/2)))^(gamma/(gamma-1)));
+Pt2=pto*piD;
+Tto=to*(1+(gamma-1)*(Mo^2)/2);
+Tt2=tto;
 tauR=(tto/to)
 
 Pt13=Pt2*piF; %Answer A
