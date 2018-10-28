@@ -91,7 +91,6 @@ TH=max(T)
 TL=min(T)
 Carnot= 1-(TL/TH)
 ettaTH= (alpha*(v19eff^2)+(1+f)*(v9eff^2)-(1+alpha)*(vo^2))/(2*f*QR) 
-% carnot roughly double Answer E
 
 % S(2) = load('')
 % sound(S(2).y,S(2).Fs)
