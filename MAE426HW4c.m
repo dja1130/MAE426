@@ -32,6 +32,11 @@ tto=to*(1+(gamma-1)*(Mo^2)/2);
 tt2=tto;
 tauR=(tto/to)
 
+Pt13=Pt2*piF; %Answer A
+Tt13= Tt2*piF^((gamma1-1)/(gamma1*ef)); %Answer B
+Pt19=piFN*Pt13;
+Tt19=Tt13;
+T19=Tt19/1.2
 
 for piC= 1:1:40
 
@@ -100,4 +105,5 @@ hold on
 
 
 end
+
 
