@@ -15,6 +15,8 @@ gamma=1.4;
 gamma2=1.33;
 gamma3=1.3;
 tauL=7;
+
+To=288.15-0.0065*(11000)
 ao=sqrt(gamma*R*to);
 vo=Mo*ao;
 piD=1;
