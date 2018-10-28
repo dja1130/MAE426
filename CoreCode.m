@@ -9,7 +9,7 @@ Psl=101.3
 %we get
 To=288.15-0.0065*(11000)
 Po=Psl*(To/Tsl)^(g/(R*0.0065)); %kPa
-Qr=42800000; %j/kg
+Qr=42000000; %j/kg
 cpc=1004;
 cph=1156 ;
 cpAB=1423; %j/kgK
@@ -22,13 +22,18 @@ tauL=7;
 ao=sqrt(gamma*R*to);
 vo=Mo*ao;
 piD=.98;
-ec=1;
-piB= 1;
-ettaB=1;
-et=1;
-ettaM=1;
-piN=1;
-alpha=10
+ec=.9;
+piB= 0.95;
+ettaB=0.98;
+et=0.9;
+ettaM=0.98;
+piN=0.9;
+
+alpha=10;
+piF=1.6;
+ef=0.9;
+piFN=0.9;
+
 
 Pto= po*((1+((gamma-1)*((Mo^2)/2)))^(gamma/(gamma-1)));
 Pt2=pto*piD;
@@ -42,7 +47,7 @@ Pt19=piFN*Pt13;
 Tt19=Tt13;
 T19=Tt19/1.2
 
-for piC= 1:1:40
+for piC= 30
 
 pt2=piD*pto
 pt3=pt2*piC;
