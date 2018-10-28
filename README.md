@@ -42,7 +42,6 @@ tt3=tt2*tauC;
 tt4=(cpc*to*tauL)/cph;
 pt4=pt3*piB;
 
-
 f=(tauL-tauC*tauR)/((Qr*ettaB/(cpc*to))-tauL)
 
 tt5=tt4-(cpc*(tt3-tt2)/(cph*ettaM*(1+f)));
@@ -63,50 +62,6 @@ SFC=f/NDST/ao*3600*1000 %
 ettath=((((1+f)*((v9^2)/2)-((vo^2)/2))/(f*Qr)))
 ethtap=NDST*ao*vo/((1+f)*v9^2/2-vo^2/2)
 
-
-% Problem 4.25
-clc
-clear all
-why
-
-Mo=.8;
-R=287;
-gamma1=1.4;
-gamma2= 1.33;
-cpc=1004;
-cph=1156;
-%From 37 Kft then converted to SI
-To=216.67; %R
-Po=21.732; %KPa
-
-ao=sqrt(gamma1*To*R);
-vo=Mo*ao;
-piD=.995;
-piC=40;
-ec=.9;
-alpha=6;
-piF=1.6;
-piFN=.98;
-ef=.9;
-tauL=7;
-QR=42800000;
-piB=0.95;
-ettaB= .98;
-et=0.9;
-piN=0.98;
-ettaM=.975;
-
-Pto=Po*(1+.2*Mo^2)^(gamma1/(gamma1-1));
-Tto=To*(1+0.2*0.8^2);
-Pt2=Pto*piD;
-Tt2=Tto;
-tauC=piC^((gamma1-1)/(ec*gamma1));
-
-Tt3=Tt2*tauC;
-Pt3=Pt2*piC;
-
-Tt4=cpc*To*tauL/cph;
-Pt4=Pt3*piB;
 
 Pt13=Pt2*piF;
 Tt13= Tt2*piF^((gamma1-1)/(gamma1*et));
@@ -151,19 +106,6 @@ ettaTH= (alpha*(v19eff^2)+(1+f)*(v9eff^2)-(1+alpha)*(vo^2))/(2*f*QR)
 
 
 
-ettaP=2*((alpha*(v19eff-vo))+((1+f)*v9eff-vo))*vo/((alpha*(v19eff^2))+(1+f)*(v9eff^2)-(1+alpha)*(vo^2)) %Answer F
-
-NDST= ((alpha*v19eff-alpha*vo)+((1+f)*v9eff-vo))/((1+alpha)*ao)
-
-
-TSFC= (f*10^6)/((1+alpha)*ao)/NDST %Answer G in mg/s/N
-
 % S(2) = load('')
 % sound(S(2).y,S(2).Fs)
-
-
-
-
-
-
 
