@@ -1,7 +1,7 @@
-
 clear all
 Mo=0.75;
 R=287;
+g=9.81
 %from
 h=10e3; %Km
 Tsl= 288.15
